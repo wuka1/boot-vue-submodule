@@ -1,0 +1,56 @@
+#!/bin/bash  
+  
+# 一个打印函数，前后加空行
+function print(){
+echo "===============$*================"
+}
+
+FILE_ENCODING=utf-8
+PMD_LANGUAGE=zh
+  
+print "..................开始PMD检查....................."  
+wd=`pwd -W`  
+
+# 默认git的hooks存放位置
+hooks_path="$wd/.git/hooks"
+
+# 已经工程目录下执行了git config core.hooksPath .pmd-hook
+git_hooks=`git config core.hooksPath`
+if [ -n "$git_hooks" ]; then
+hooks_path="$wd/$git_hooks"
+fi
+
+check_jar_path="$hooks_path/p3c-pmd-2.1.1-jar-with-dependencies.jar"
+check_xml_path="$hooks_path/rulesets/java/ali-comment.xml,$hooks_path/rulesets/java/ali-concurrent.xml,$hooks_path/rulesets/java/ali-constant.xml,$hooks_path/rulesets/java/ali-exception.xml,$hooks_path/rulesets/java/ali-flowcontrol.xml,$hooks_path/rulesets/java/ali-naming.xml,$hooks_path/rulesets/java/ali-oop.xml,$hooks_path/rulesets/java/ali-orm.xml,$hooks_path/rulesets/java/ali-other.xml,$hooks_path/rulesets/java/ali-set.xml"
+check_result_file="$wd/temp"
+err_file="tmp"
+
+echo "当前工作目录：$wd"
+   
+if [ -f $err_file ]; then
+rm -rf $err_file
+fi
+
+path=''
+# `git status --porcelain | sed s/^...// | grep '\.java$' |grep -Ev 'resources|test'| tr '\n' ' '`
+for file in `git status --porcelain | sed s/^...// | grep '\.java$' |grep -Ev 'resources|test'|awk '{print $NF}'`;
+dod
+#if [[ $file == *"->"*]]; then
+#echo "------------------:$file"
+#echo `$file|awk '{print $3}'`
+#fi
+path+="$file,"
+done
+if [ -n "$path" ]; then
+java -Dfile.encoding=$FILE_ENCODING -Dpmd.language=$PMD_LANGUAGE -cp $check_jar_path net.sourceforge.pmd.PMD -d $path -R $check_xml_path -f text > $err_file
+fi 
+
+if [ -s $err_file ]; then  
+print "commit失败,需修订问题如下，请在commit前完成PMD修订!" 
+cat $err_file  #显示错误
+rm -rf $err_file #删除错误临时文件
+print "本地修订可借助idea插件jup-pmd-plugin或p3c逐项进行!" 
+exit 1  
+fi  
+print "PMD检查完成.........................."   
+exit 0

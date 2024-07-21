@@ -1,0 +1,41 @@
+#!/bin/bash  
+  
+# 一个打印函数，前后加空行
+function print(){
+echo "===========$*============"
+}
+  
+print "开始checkstyle检查........................"  
+wd=`pwd`  
+
+hooks_path="$wd/.git/hooks"
+git_hooks=`git config core.hooksPath`
+if [ -n "$git_hooks" ]; then
+hooks_path="$wd/$git_hooks"
+fi
+
+check_jar_path="$hooks_path/checkstyle-9.3-all.jar"  
+check_xml_path="$hooks_path/cib_checks.xml"  
+
+echo "当前工作目录：$wd"
+  
+echo "No Java file changes." > temp  
+# git status --porcelain | sed s/^...// | grep '\.java$' |grep -Ev 'resources|test'| tr '\n' ' '
+files=`git status --porcelain | sed s/^...// | grep '\.java$' |grep -Ev 'resources|test'|awk '{print $NF}'|tr '\n' ' '`  
+if [ -n "$files" ]; then 
+java -jar $check_jar_path -c $check_xml_path $files > temp 2>&1  
+fi 
+
+sed -i '$d' temp 
+cat temp 
+
+error=`cat temp | grep -E '\[(WARN|ERROR)\]'`  
+rm -rf temp  
+  
+if [ -n "$error" ]  
+then  
+print "commit失败,请在commit前完成checkstyle修订!"  
+exit 1  
+fi  
+print "checkstyle检查完成......................."  
+exit 0
