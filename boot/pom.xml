@@ -61,22 +61,22 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <artifactId>exec-maven-plugin</artifactId>-->
-<!--                <groupId>org.codehaus.mojo</groupId>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>uncompress</id>-->
-<!--                        <phase>compile</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>exec</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <executable>${basedir}/../.checkstyle-hooks/init_hooks${script.extension}</executable>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <artifactId>exec-maven-plugin</artifactId>
+                <groupId>org.codehaus.mojo</groupId>
+                <executions>
+                    <execution>
+                        <id>uncompress</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <executable>${basedir}/../.checkstyle-hooks/init_hooks${script.extension}</executable>
+                </configuration>
+            </plugin>
             <plugin>
                 <!-- 插件maven-clean-plugin，用于在编译前，清除之前编译的文件、文件夹等，避免残留之前的内容 -->
                 <groupId>org.apache.maven.plugins</groupId>

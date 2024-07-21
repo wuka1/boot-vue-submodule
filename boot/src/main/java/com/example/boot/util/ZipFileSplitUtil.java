@@ -41,6 +41,7 @@ public class ZipFileSplitUtil {
 
     public static void main(String[] args) throws Exception {
         List<File> attah = new ArrayList<>();
+        // 要拆分的文件目录
         attah.add(new File("E:\\javaWorkspace\\boot-vue\\规范.zip"));
         List<File> fileList = splitVolumeCompressFiles(10, attah, "D:/data", "");
         System.out.println(fileList.size());
