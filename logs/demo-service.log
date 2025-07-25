@@ -1,0 +1,27 @@
+2025-07-24 15:04:04.033 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 24060 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-24 15:04:04.035 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:04:04.493 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d3c00189-5178-36dc-8815-1169a59eb7c9
+2025-07-24 15:04:04.739 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-24 15:04:04.744 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:04:04.745 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-24 15:04:04.852 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:04:04.852 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 792 ms
+2025-07-24 15:04:05.139 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-24 15:04:05.398 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-24 15:04:05.440 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-24 15:04:05.627 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 2.16 seconds (JVM running for 2.783)
+2025-07-24 15:05:00.746 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 19296 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-24 15:05:00.748 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 15:05:01.165 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=d3c00189-5178-36dc-8815-1169a59eb7c9
+2025-07-24 15:05:01.390 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-24 15:05:01.396 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-24 15:05:01.397 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-24 15:05:01.499 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-24 15:05:01.500 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 727 ms
+2025-07-24 15:05:01.784 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-24 15:05:02.048 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-24 15:05:02.094 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-24 15:05:02.281 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 2.05 seconds (JVM running for 2.738)
+2025-07-24 15:05:37.531 [http-nio-8082-exec-1]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 15:05:37.531 [http-nio-8082-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-24 15:05:37.532 [http-nio-8082-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms

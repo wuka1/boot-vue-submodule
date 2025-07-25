@@ -1,0 +1,64 @@
+{
+  "policyStoreId": "PAYROLLAPP_POLICYSTOREID",
+  "principal": {
+    "entityType": "PayrollApp::Employee",
+    "entityId": "Alice"
+  },
+  "action": {
+    "actionType": "PayrollApp::Action",
+    "actionId": "viewSalary"
+  },
+  "resource": {
+    "entityType": "PayrollApp::Salary",
+    "entityId": "Salary-Bob"
+  },
+  "entities": {
+    "entityList": [
+      {
+        "identifier": {
+          "entityType": "PayrollApp::Employee",
+          "entityId": "Alice"
+        },
+        "attributes": {
+          "manager": {
+            "entityIdentifier": {
+              "entityType": "PayrollApp::Employee",
+              "entityId": "None"
+            }
+          }
+        },
+        "parents": []
+      },
+      {
+        "identifier": {
+          "entityType": "PayrollApp::Salary",
+          "entityId": "Salary-Bob"
+        },
+        "attributes": {
+          "owner": {
+            "entityIdentifier": {
+              "entityType": "PayrollApp::Employee",
+              "entityId": "Bob"
+            }
+          }
+        },
+        "parents": []
+      },
+      {
+        "identifier": {
+          "entityType": "PayrollApp::Employee",
+          "entityId": "Bob"
+        },
+        "attributes": {
+          "manager": {
+            "entityIdentifier": {
+              "entityType": "PayrollApp::Employee",
+              "entityId": "Alice"
+            }
+          }
+        },
+        "parents": []
+      }
+    ]
+  }
+}

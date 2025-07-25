@@ -1,0 +1,185 @@
+2025-07-22 18:18:25.824 [main]  INFO  c.example.gateway.GatewayApplication - Starting GatewayApplication using Java 17.0.11 on wuka-pc with PID 20356 (E:\javaWorkspace\boot-modules\gateway\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-22 18:18:25.828 [main]  INFO  c.example.gateway.GatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-22 18:18:27.000 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=0cb25f0c-44bc-3a74-a7b2-edd9990e11c8
+2025-07-22 18:18:27.882 [main]  DEBUG o.s.c.g.config.GatewayProperties - Routes supplied from Gateway Properties: [RouteDefinition{id='test_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}}}], uri=https://spring.io, order=0, metadata={}}, RouteDefinition{id='auth_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/auth/**}}], filters=[], uri=http://127.0.0.1:8081, order=0, metadata={}}]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-07-22 18:18:28.148 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-07-22 18:18:28.181 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying {_genkey_0=/api/**} to Path
+2025-07-22 18:18:28.218 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying filter {_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}} to RewritePath
+2025-07-22 18:18:28.235 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: test_route
+2025-07-22 18:18:28.235 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition auth_route applying {_genkey_0=/auth/**} to Path
+2025-07-22 18:18:28.237 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: auth_route
+2025-07-22 18:18:28.239 [main]  DEBUG o.s.c.g.filter.GatewayMetricsFilter - New routes count: 2
+2025-07-22 18:18:28.257 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-22 18:18:28.260 [main]  WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authGlobalFilter' defined in file [E:\javaWorkspace\boot-modules\gateway\target\classes\com\example\gateway\filter\AuthGlobalFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+2025-07-22 18:18:28.280 [main]  INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-07-22 18:18:28.306 [main]  ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authGlobalFilter' defined in file [E:\javaWorkspace\boot-modules\gateway\target\classes\com\example\gateway\filter\AuthGlobalFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.gateway.GatewayApplication.main(GatewayApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:382)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402)
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 28 common frames omitted
+2025-07-22 18:24:39.582 [main]  INFO  c.example.gateway.GatewayApplication - Starting GatewayApplication using Java 17.0.11 on wuka-pc with PID 10212 (E:\javaWorkspace\boot-modules\gateway\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-22 18:24:39.584 [main]  INFO  c.example.gateway.GatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-22 18:24:40.223 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=0cb25f0c-44bc-3a74-a7b2-edd9990e11c8
+2025-07-22 18:24:40.714 [main]  DEBUG o.s.c.g.config.GatewayProperties - Routes supplied from Gateway Properties: [RouteDefinition{id='test_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}}}], uri=https://spring.io, order=0, metadata={}}, RouteDefinition{id='auth_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/auth/**}}], filters=[], uri=http://127.0.0.1:8081, order=0, metadata={}}]
+2025-07-22 18:24:40.837 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-07-22 18:24:40.838 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-07-22 18:24:40.854 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying {_genkey_0=/api/**} to Path
+2025-07-22 18:24:40.891 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying filter {_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}} to RewritePath
+2025-07-22 18:24:40.908 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: test_route
+2025-07-22 18:24:40.908 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition auth_route applying {_genkey_0=/auth/**} to Path
+2025-07-22 18:24:40.909 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: auth_route
+2025-07-22 18:24:40.911 [main]  DEBUG o.s.c.g.filter.GatewayMetricsFilter - New routes count: 2
+2025-07-22 18:24:40.924 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-22 18:24:40.926 [main]  WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authGlobalFilter' defined in file [E:\javaWorkspace\boot-modules\gateway\target\classes\com\example\gateway\filter\AuthGlobalFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+2025-07-22 18:24:40.941 [main]  INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-07-22 18:24:40.958 [main]  ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authGlobalFilter' defined in file [E:\javaWorkspace\boot-modules\gateway\target\classes\com\example\gateway\filter\AuthGlobalFilter.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:801)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:224)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:409)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1289)
+	at com.example.gateway.GatewayApplication.main(GatewayApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.gateway.api.AuthPermissionClient': Unexpected exception during bean creation; nested exception is java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:911)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	... 19 common frames omitted
+Caused by: java.lang.IllegalStateException: No Feign Client for loadBalancing defined. Did you forget to include spring-cloud-starter-loadbalancer?
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.loadBalance(FeignClientFactoryBean.java:382)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getTarget(FeignClientFactoryBean.java:427)
+	at org.springframework.cloud.openfeign.FeignClientFactoryBean.getObject(FeignClientFactoryBean.java:402)
+	at org.springframework.cloud.openfeign.FeignClientsRegistrar.lambda$registerFeignClient$0(FeignClientsRegistrar.java:235)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.obtainFromSupplier(AbstractAutowireCapableBeanFactory.java:1249)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	... 28 common frames omitted
+2025-07-22 18:26:26.498 [main]  INFO  c.example.gateway.GatewayApplication - Starting GatewayApplication using Java 17.0.11 on wuka-pc with PID 19404 (E:\javaWorkspace\boot-modules\gateway\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-22 18:26:26.500 [main]  INFO  c.example.gateway.GatewayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-22 18:26:27.167 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=df626fa0-08ec-3477-b09e-4df97f8f1446
+2025-07-22 18:26:27.240 [main]  INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-07-22 18:26:27.241 [main]  INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-07-22 18:26:27.242 [main]  INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-07-22 18:26:27.637 [main]  DEBUG o.s.c.g.config.GatewayProperties - Routes supplied from Gateway Properties: [RouteDefinition{id='test_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/api/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}}}], uri=https://spring.io, order=0, metadata={}}, RouteDefinition{id='auth_route', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/auth/**}}], filters=[], uri=http://127.0.0.1:8081, order=0, metadata={}}]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [After]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Before]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Between]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Cookie]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Header]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Host]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Method]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Path]
+2025-07-22 18:26:27.767 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Query]
+2025-07-22 18:26:27.768 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [ReadBody]
+2025-07-22 18:26:27.768 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [RemoteAddr]
+2025-07-22 18:26:27.768 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-07-22 18:26:27.768 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [Weight]
+2025-07-22 18:26:27.768 [main]  INFO  o.s.c.g.r.RouteDefinitionRouteLocator - Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-07-22 18:26:27.782 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying {_genkey_0=/api/**} to Path
+2025-07-22 18:26:27.819 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying filter {_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}} to RewritePath
+2025-07-22 18:26:27.835 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: test_route
+2025-07-22 18:26:27.835 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition auth_route applying {_genkey_0=/auth/**} to Path
+2025-07-22 18:26:27.836 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: auth_route
+2025-07-22 18:26:27.838 [main]  DEBUG o.s.c.g.filter.GatewayMetricsFilter - New routes count: 2
+2025-07-22 18:26:27.856 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-22 18:26:28.318 [main]  INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-07-22 18:26:28.375 [main]  DEBUG o.s.w.s.a.HttpWebHandlerAdapter - enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-07-22 18:26:28.505 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-07-22 18:26:28.742 [main]  INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2025-07-22 18:26:28.889 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying {_genkey_0=/api/**} to Path
+2025-07-22 18:26:28.891 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition test_route applying filter {_genkey_0=/api(/(?<segment>.*))?$, _genkey_1=/projects/spring-cloud-gateway/$\{segment}} to RewritePath
+2025-07-22 18:26:28.892 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: test_route
+2025-07-22 18:26:28.892 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition auth_route applying {_genkey_0=/auth/**} to Path
+2025-07-22 18:26:28.892 [main]  DEBUG o.s.c.g.r.RouteDefinitionRouteLocator - RouteDefinition matched: auth_route
+2025-07-22 18:26:28.894 [main]  DEBUG o.s.c.g.filter.GatewayMetricsFilter - New routes count: 2
+2025-07-22 18:26:28.895 [main]  INFO  c.example.gateway.GatewayApplication - Started GatewayApplication in 2.881 seconds (JVM running for 3.43)
