@@ -1,4 +1,4 @@
-package com.example.auth.service;
+package com.example.auth.security;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.example.auth.entity.PermissionEntity;
@@ -38,7 +38,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (user == null) {
             throw new UsernameNotFoundException("用户未找到: " + username);
         }
-        // 后续自定义封装
+        // 自定义封装UserDetail
         return new UserDetailImpl(user);
 //        // 获取用户角色
 //        List<RoleEntity> roles = userMapper.findRolesByUserId(user.getId());

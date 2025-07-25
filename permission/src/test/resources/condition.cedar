@@ -1,3 +1,4 @@
+@id("Policy #1")
 permit (
     principal,
     action == Action::"viewSalary",

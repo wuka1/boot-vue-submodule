@@ -1,4 +1,4 @@
-package com.example.common.utils.exception;
+package com.example.auth.exception;
 
 import lombok.Getter;
 

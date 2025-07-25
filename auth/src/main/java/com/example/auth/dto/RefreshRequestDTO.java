@@ -11,7 +11,7 @@ import lombok.Data;
  **/
 
 @Data
-public class RefreshRequest {
+public class RefreshRequestDTO {
     @JsonProperty("refresh_token")  //request字段与dto不同时
     private String refreshToken;
 }

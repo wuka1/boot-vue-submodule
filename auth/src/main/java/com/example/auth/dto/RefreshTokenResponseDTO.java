@@ -1,4 +1,4 @@
-package com.example.auth.vo;
+package com.example.auth.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RefreshTokenResponseVO {
+public class RefreshTokenResponseDTO {
 
     private String refreshToken;
     

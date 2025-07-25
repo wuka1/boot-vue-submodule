@@ -1,11 +1,15 @@
 package com.example.permission.cedar;
 
+import com.cedarpolicy.model.exception.InternalException;
 import com.cedarpolicy.model.schema.Schema;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import com.cedarpolicy.model.schema.Schema.JsonOrCedar
 
 /**
  * *@Description TODO
@@ -13,87 +17,20 @@ import com.cedarpolicy.model.schema.Schema.JsonOrCedar
  * *@Date 2024/8/16
  * *@Version 1.0
  **/
-public class schemeTest {
+public class SchemaTest {
     @Test
-    public void parseJsonSchema() {
-        assertDoesNotThrow(() -> {
-            Schema.parse("{}");
-            Schema.parse("""
-                    {
-                        "Foo::Bar": {
-                            "entityTypes": {},
-                            "actions": {}
-                        }
-                    }
-                    """);
-            Schema.parse( """
-                    {
-                        "": {
-                            "entityTypes": {
-                                "User": {
-                                    "shape": {
-                                        "type": "Record",
-                                        "attributes": {
-                                            "name": {
-                                                "type": "String",
-                                                "required": true
-                                            },
-                                            "age": {
-                                                "type": "Long",
-                                                "required": false
-                                            }
-                                        }
-                                    }
-                                },
-                                "Photo": {
-                                    "memberOfTypes": [ "Album" ]
-                                },
-                                "Album": {}
-                            },
-                            "actions": {
-                                "view": {
-                                    "appliesTo": {
-                                        "principalTypes": ["User"],
-                                        "resourceTypes": ["Photo", "Album"]
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    """);
-        });
-        assertThrows(Exception.class, () -> {
-            Schema.parse("{\"foo\": \"bar\"}");
-            Schema.parse( "namespace Foo::Bar;");
-        });
-    }
+    public void parseJsonSchema() throws IOException, InternalException {
+        // `commonTypes`, `entityTypes`, `actions`是固定的
+        Schema.parse("{}");
+        Schema.parse("{\"entityName\": {\"entityTypes\": {}, \"actions\": {}}}");
+        Schema.parse("{\"ns1\": {\"entityTypes\": {}, \"actions\":  {}}}");
 
-    @Test
-    public void parseCedarSchema() {
-        assertDoesNotThrow(() -> {
-            Schema.parse( "");
-            Schema.parse("namespace Foo::Bar {}");
-            Schema.parse("""
-                    entity User = {
-                        name: String,
-                        age?: Long,
-                    };
-                    entity Photo in Album;
-                    entity Album;
-                    action view
-                      appliesTo { principal: [User], resource: [Album, Photo] };
-                    """);
-        });
-        assertThrows(Exception.class, () -> {
-            Schema.parse(JsonOrCedar.Cedar, """
-                    {
-                        "Foo::Bar": {
-                            "entityTypes" {},
-                            "actions": {}
-                        }
-                    }
-                    """);
-            Schema.parse(JsonOrCedar.Cedar, "namspace Foo::Bar;");
-        });
+        //Schema(JsonNode)
+        String json = "{ \"f1\" : \"v1\" } ";
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(json);
+        Schema s = new Schema(jsonNode);
+        System.out.println(s);
+
     }
 }

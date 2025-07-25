@@ -1,11 +1,9 @@
-package com.example.common.utils.jwt;
+package com.example.common.utils;
 
 import cn.hutool.core.exceptions.ValidateException;
 import cn.hutool.jwt.JWT;
 import cn.hutool.jwt.JWTUtil;
 import cn.hutool.jwt.JWTValidator;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +11,6 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -39,13 +36,14 @@ public class JwtUtil { //后续会依赖配置中心注入secret，所以使用@
 
 
     // 生成 JWT 令牌
-    public String generateAccessToken(String username, List<String> roles) {
+    public String generateAccessToken(String username, String tenant_id) {
         // 创建 JWT 负载
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime expTime = now.plusMinutes(accessExp); // 有效期
         Map<String, Object> claims = new HashMap<>();
         claims.put("sub", username);  // 放入需要的负载信息
-        claims.put("role", roles);  //
+        claims.put("tenant_id", tenant_id); // 租户id
+//        claims.put("role", roles);  //roles
         claims.put("iat", now);  // 发布时间
         claims.put("exp", expTime);  // 过期时间
         claims.put("type", "access");
@@ -54,11 +52,12 @@ public class JwtUtil { //后续会依赖配置中心注入secret，所以使用@
     }
 
     // 生成refresh，通过refresh token来重新生成access token
-    public String generateRefreshToken(String username) {
+    public String generateRefreshToken(String username, String tenant_id) {
         LocalDateTime now = LocalDateTime.now();
         LocalDateTime expTime = now.plusDays(refreshExp);
         Map<String, Object> payload = new HashMap<>();
         payload.put("sub", username);
+        payload.put("tenant_id", tenant_id); // 后续基于refresh_token生成access_token时可以直接获取
         payload.put("type", "refresh");
         payload.put("iat", now);  // 发布时间
         payload.put("exp", expTime);  // 过期时间
@@ -86,13 +85,17 @@ public class JwtUtil { //后续会依赖配置中心注入secret，所以使用@
         } catch (Exception e) {
             return false;
         }
-        System.out.println("token验证正常");
         return true;
     }
 
     public String getUsername(String token) {
         JWT jwt = JWTUtil.parseToken(token);
         return (String)jwt.getPayload("sub");
+    }
+
+    public String getTenantID(String token) {
+        JWT jwt = JWTUtil.parseToken(token);
+        return (String)jwt.getPayload("tenant_id");
     }
 
     // 验证jwt token
@@ -106,15 +109,14 @@ public class JwtUtil { //后续会依赖配置中心注入secret，所以使用@
             JWTValidator.of(jwt).validateDate(); // 验证日期，日期超过会抛异常
 
             // 获取负载信息
-            String username = (String) jwt.getPayload("username");
+//            String username = (String) jwt.getPayload("sub");
 //            String role = (String) jwt.getPayload("role");
-
-            System.out.println("Username: " + username);
+//            System.out.println("Username: " + username);
 //            System.out.println("Role: " + role);
             return true;
 
         } catch (ValidateException e) {
-            System.out.println("token 已过期");
+            log.error("token 已过期");
             return false;
         } catch (Exception e) {
             return false;

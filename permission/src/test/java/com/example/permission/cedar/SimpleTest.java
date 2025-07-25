@@ -1,4 +1,4 @@
-package com.example.permission;
+package com.example.permission.cedar;
 
 /**
  * *@Description TODO
@@ -11,15 +11,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import com.cedarpolicy.model.exception.AuthException;
-import com.cedarpolicy.model.AuthorizationResponse;
 
-import com.example.permission.cedar.SampleJavaClass;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class CedarSimpleTest {
+public class SimpleTest {
 
     @BeforeAll
     public static void loadDll() {

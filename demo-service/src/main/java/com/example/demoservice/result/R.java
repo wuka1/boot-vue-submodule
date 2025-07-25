@@ -1,4 +1,4 @@
-package com.example.gateway.common;
+package com.example.demoservice.result;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
  * *@Date 2025/7/23
  * *@Version 1.0
  **/
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

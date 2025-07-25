@@ -1,5 +1,6 @@
-package com.example.auth.security;
+package com.example.auth.security.custom;
 
+import com.example.auth.security.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

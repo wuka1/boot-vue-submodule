@@ -1,8 +1,10 @@
+@id("Context_time #1")
 permit (
     principal,
     action == Action::"viewSalary",
     resource
 )
 when {
-    ip(context.ip).isInRange(ip("192.168.0.1/24"))
+    context.now - resource.timePolicy.startTime > 0 &&
+    resource.timePolicy.endTime - context.now > 0
 };

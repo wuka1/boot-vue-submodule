@@ -1,9 +1,7 @@
-package com.example.common.utils.exception;
+package com.example.auth.exception;
 
 import com.example.auth.common.ErrorInfo;
 import com.example.auth.common.R;
-import com.example.common.utils.exception.AuthException;
-import com.example.common.utils.exception.BizException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.MethodArgumentNotValidException;

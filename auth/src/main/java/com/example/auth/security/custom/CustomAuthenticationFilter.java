@@ -1,4 +1,4 @@
-package com.example.auth.security;
+package com.example.auth.security.custom;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

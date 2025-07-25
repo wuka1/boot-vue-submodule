@@ -1,4 +1,4 @@
-package com.example.common.utils.exception;
+package com.example.auth.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

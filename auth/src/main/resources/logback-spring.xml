@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <!-- 定义 CONSOLE appender -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- 使用 Spring Boot 的模式常量 -->
+            <pattern>${LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %highlight(%-5level) %logger{36} - %msg%n}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件保存路径 -->
+    <property name="LOG_HOME" value="logs"/>
+    <!-- 文件输出 Appender（每天滚动） -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/auth.log</file>
+        <!-- 滚动策略：按天生成新文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 命名模式：日期 + 索引 -->
+            <fileNamePattern>${LOG_HOME}/auth.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+            <!-- 使用基于大小的时间触发策略 -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>1MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+            <!-- 最多保留30天的日志 -->
+            <maxHistory>30</maxHistory>
+            <!-- 总大小上限（可选） -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %-5level %logger{36} - %msg%n}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!-- 自定义 logger，放在 appender 定义之后 -->
+    <logger name="org.springframework.security" level="DEBUG"/>
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="com.example.auth" level="DEBUG"/>
+
+    <root level="INFO"> <!--配置所有未被单独配置的 logger 的默认日志级别。只要日志级别 ≥ INFO 就会输出-->
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>

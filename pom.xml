@@ -3,30 +3,97 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>boot-vue-submodule</artifactId>
+    <artifactId>boot-modules</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <modules>
-        <module>boot</module>
-        <module>vue</module>
-    </modules>
+    <!-- 继承 Spring Boot 父工程 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.17</version>
+        <relativePath/>
+    </parent>
 
     <properties>
+        <java.version>1.8</java.version>
+        <!-- Spring Cloud 2021.0.8 兼容 Spring Boot 2.7.x -->
+        <spring-cloud.version>2021.0.8</spring-cloud.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.boot.version>2.6.13</spring.boot.version>
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <mysql.driver.version>9.3.0</mysql.driver.version>
+        <java.version>1.8</java.version>
     </properties>
 
+    <modules>
+        <module>vue</module>
+        <module>common</module>
+        <module>workflow</module>
+        <module>permission</module>
+        <module>cache-manager</module>
+        <module>gateway</module>
+        <module>auth</module>
+        <module>demo-service</module>
+        <!--        <module>mq-manager</module>-->
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.38</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.29</version>
+        </dependency>
+    </dependencies>
+
+    <!-- 依赖管理（BOM 导入） -->
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Cloud 版本控制 -->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
-                <version>${spring.boot.version}</version>
-                <scope>import</scope>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
+                <scope>import</scope> <!-- 关键：继承版本管理 -->
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>33.2.1-jre</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <!-- 公共插件管理 -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Spring Boot Plugin -->
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+                <!--java编译插件-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

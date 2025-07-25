@@ -1,4 +1,4 @@
-package com.example.gateway.config;
+package com.example.auth.config;
 
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -12,10 +12,9 @@ import java.util.List;
  * *@Date 2025/7/23
  * *@Version 1.0
  **/
-
 @Getter
 @Component
-@ConfigurationProperties(prefix="whitelist")
+@ConfigurationProperties(prefix = "whitelist")
 public class WhitelistProperties {
 
     /**

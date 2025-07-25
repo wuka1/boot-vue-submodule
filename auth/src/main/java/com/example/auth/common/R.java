@@ -1,4 +1,4 @@
-package com.example.common.utils.result;
+package com.example.auth.common;
 
 /**
  * *@Description TODO
@@ -6,13 +6,16 @@ package com.example.common.utils.result;
  * *@Date 2025/7/16
  * *@Version 1.0
  **/
-import com.example.common.utils.exception.ErrorInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * 返回结果接收器封装
+ * @param <T>
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor(staticName = "of")

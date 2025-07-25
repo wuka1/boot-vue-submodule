@@ -15,7 +15,7 @@
     <property name="LOG_HOME" value="logs"/>
     <!-- 文件输出 Appender（每天滚动） -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_HOME}/gateway.log</file>
+        <file>${LOG_HOME}/demo-service.log</file>
         <!-- 滚动策略：按天生成新文件 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 命名模式：日期 + 索引 -->
@@ -36,12 +36,9 @@
     </appender>
 
     <!-- logger定义，放在 appender 定义之后，开源组件logger配置 -->
-    <logger name="org.springframework.cloud.gateway" level="DEBUG"/>
     <logger name="org.springframework.web.server.adapter.HttpWebHandlerAdapter" level="DEBUG"/>
-    <logger name="reactor.netty.http.client" level="INFO"/>
-    <logger name="reactor.netty.http.server" level="INFO"/>
     <!-- 业务logger定义 -->
-    <logger name="com.example.gateway.filter" level="DEBUG"/>
+    <logger name="com.example.demoservice.aspect.AuthInterceptor" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>

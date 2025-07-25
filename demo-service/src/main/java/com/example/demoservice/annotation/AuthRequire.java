@@ -14,7 +14,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)  // 只能用在方法上
 @Retention(RetentionPolicy.RUNTIME)  // 运行时生效
-public @interface RequiresAuth {
+public @interface AuthRequire {
 
     /**
      * 资源标识 (如: order, payment, user)

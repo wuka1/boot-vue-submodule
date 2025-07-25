@@ -1,6 +1,5 @@
-package com.example.permission;
+package com.example.permission.cedar;
 
-import cn.hutool.core.lang.hash.Hash;
 import com.cedarpolicy.AuthorizationEngine;
 import com.cedarpolicy.BasicAuthorizationEngine;
 import com.cedarpolicy.model.AuthorizationRequest;
@@ -9,7 +8,6 @@ import com.cedarpolicy.model.exception.AuthException;
 import com.cedarpolicy.model.slice.BasicSlice;
 import com.cedarpolicy.model.slice.Entity;
 import com.cedarpolicy.model.slice.Policy;
-import com.cedarpolicy.serializer.JsonEUID;
 import com.cedarpolicy.value.EntityTypeName;
 import com.cedarpolicy.value.EntityUID;
 
@@ -30,7 +28,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * *@Version 1.0
  **/
 @SpringBootTest
-public class CedarTest {
+public class BasicTest {
 
     @BeforeAll
     public static void loadDll() {
@@ -40,9 +38,9 @@ public class CedarTest {
     @Test
     public void simple() throws AuthException {
         var auth = new BasicAuthorizationEngine();
-        var alice = new EntityUID(EntityTypeName.parse("User").get(), "alice");
-        var view = new EntityUID(EntityTypeName.parse("Action").get(), "view");
-        var q = new AuthorizationRequest(alice, view, alice, new HashMap<>());
+        var principalEUID = new EntityUID(EntityTypeName.parse("User").get(), "alice");
+        var actionEUID = new EntityUID(EntityTypeName.parse("Action").get(), "view");
+        var q = new AuthorizationRequest(principalEUID, actionEUID, principalEUID, new HashMap<>());
         var policies = new HashSet<Policy>();
         // p0待办规则名称
         policies.add(new Policy("permit(principal,action,resource);", "p0"));
@@ -64,14 +62,14 @@ public class CedarTest {
 
 
         // data define
-        Set<Entity> e = new HashSet<>();
-        e.add(new Entity(new EntityUID(EntityTypeName.parse("User").get(), "neal"), new HashMap<>(), new HashSet<>()));
-        e.add(new Entity(new EntityUID(EntityTypeName.parse("Action").get(), "viewPhoto"), new HashMap<>(),
-                new HashSet<>()));
-
-        Entity photo = new Entity(new EntityUID(EntityTypeName.parse("Photo").get(),"photo"), new HashMap<>(),
-                new HashSet<>());
-        e.add(photo);
+//        Set<Entity> e = new HashSet<>();
+//        e.add(new Entity(new EntityUID(EntityTypeName.parse("User").get(), "neal"), new HashMap<>(), new HashSet<>()));
+//        e.add(new Entity(new EntityUID(EntityTypeName.parse("Action").get(), "viewPhoto"), new HashMap<>(),
+//                new HashSet<>()));
+//
+//        Entity photo = new Entity(new EntityUID(EntityTypeName.parse("Photo").get(),"photo"), new HashMap<>(),
+//                new HashSet<>());
+//        e.add(photo);
 
        // 认证请求封装
 //        EntityUID user = new EntityUID(EntityTypeName.parse("User").get(), "neal"); // 这里可以满足角色的需求，对应者组织如何处理？
@@ -87,8 +85,42 @@ public class CedarTest {
         var slice = new BasicSlice(ps, new HashSet<>());
         AuthorizationResponse resp = ae.isAuthorized(r, slice);
         System.out.println(resp.isAllowed());
+    }
+
+    @Test
+    public void org() throws AuthException {
+        // policy define
+        Set<Policy> ps = new HashSet<>(); //支持多个规则，规则之间是or还是and时如何处理？
+        String fullPolicy = "permit(principal == cib::ph::kj, action == Action::\"viewPhoto\", resource == " +
+                "Photo::\"photo.jpg\");";
+        ps.add(new Policy(fullPolicy, "p1"));
+//        ps.add(new Policy("permit(principal,action,resource);", "p0"));  //没有配具体的，代表没有认证
 
 
+        // data define
+        Set<Entity> e = new HashSet<>();
+        e.add(new Entity(new EntityUID(EntityTypeName.parse("User").get(), "neal"), new HashMap<>(), new HashSet<>()));
+        e.add(new Entity(new EntityUID(EntityTypeName.parse("Action").get(), "viewPhoto"), new HashMap<>(),
+                new HashSet<>()));
+
+        Entity photo = new Entity(new EntityUID(EntityTypeName.parse("Photo").get(),"photo"), new HashMap<>(),
+                new HashSet<>());
+        e.add(photo);
+
+        // 认证请求封装
+//        EntityUID user = new EntityUID(EntityTypeName.parse("User").get(), "neal"); // 这里可以满足角色的需求，对应者组织如何处理？
+        EntityUID user = new EntityUID(EntityTypeName.parse("User").get(), "kj"); // 用户为空时，验证入参不完整是如何处理？
+
+        EntityUID action = new EntityUID(EntityTypeName.parse("Action").get(), "viewPhoto"); //多个action如何处理？如view and
+        // edit
+        EntityUID resource = new EntityUID(EntityTypeName.parse("Photo").get(), "photo11.jpg"); //多个资源时如何封装？
+        AuthorizationRequest r = new AuthorizationRequest(user , action, resource, new HashMap<>());
+
+        // verify
+        AuthorizationEngine ae = new BasicAuthorizationEngine();
+        var slice = new BasicSlice(ps, new HashSet<>());
+        AuthorizationResponse resp = ae.isAuthorized(r, slice);
+        System.out.println(resp.isAllowed());
     }
 
 }

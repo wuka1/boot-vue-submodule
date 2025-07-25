@@ -1,9 +1,15 @@
 # 应用服务 WEB 访问端口
 server:
-  port=8082
+  port: 8082
+#  servlet:
+#    context-path: /api
 
 # AOP 配置
 spring:
-aop:
-auto: true
+  aop:
+    auto: true
 
+# 权限服务地址
+auth:
+  service:
+    url: http://127.0.0.1:8081/v1
