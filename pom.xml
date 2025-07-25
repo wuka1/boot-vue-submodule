@@ -19,6 +19,7 @@
         <java.version>1.8</java.version>
         <!-- Spring Cloud 2021.0.8 兼容 Spring Boot 2.7.x -->
         <spring-cloud.version>2021.0.8</spring-cloud.version>
+        <spring-cloud-ali.version>2021.0.5.0</spring-cloud-ali.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <mysql.driver.version>9.3.0</mysql.driver.version>
@@ -60,6 +61,13 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope> <!-- 关键：继承版本管理 -->
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-ali.version}</version> <!-- 替换成你需要的版本 -->
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>com.baomidou</groupId>
