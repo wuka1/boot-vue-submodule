@@ -1,0 +1,86 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+# gateway 相关配置
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: public
+        group: DEFAULT_GROUP
+    sentinel:
+      transport:
+        port: 8719
+#        dashboard: localhost:8858 # 控制台地址（可选）
+    gateway:
+      enabled: true  # 开启
+      routes:
+        - id: test_route                       # 路由id，自定义，只要唯一即可
+          uri: https://spring.io               # 目标服务地址，可以配合配置中心实现服务发现lb,--推荐不是gateway自身的地址
+          predicates:                          # 路由判断，判断请求是否符合路由规则的条件
+            - Path=/test/v1/**                    # 匹配的路径，gateway要不存在该路径
+#            - Header=name, ^(?!\s*$).+        # 匹配请求头
+#            - Method=Get                      # 匹配方法
+#            - RemoteAddr=127.0.0.1             # 匹配请求ip，对外ip
+#            - Query=name                       # 配请求参数
+#                                              # ${}的作用
+          filters:                             # 可通过实现AbstractGatewayFilterFactory自定义过滤器
+#            - RewritePath=/api/**, /user      # 关键：将请求路径重写为 /user，相同uri的场景下
+            - RewritePath=/test(/(?<segment>.*))?$, /projects/spring-cloud-gateway/$\{segment}
+#
+#            - StripPrefix=1  # 移除/api前缀
+#            - SetPath=/projects/spring-cloud-gateway # 设置新的url，适合静态路径映射或固定路径
+#
+#            - AddResponseHeader=X-Redirected-From, /api(/(?<segment>.*))?$ # 增加返回提的header  #
+#           '#{@}'是获取Spring bean
+#            - AuthGlobalFilter # 自定义认证过滤器
+        - id: auth_route
+#          uri: http://127.0.0.1:8081
+          uri: lb://auth-service
+          predicates:
+            - Path= /api/v1/auth/**
+          filters:
+            - StripPrefix=1  # 去除/api去请求后端服务
+        - id: demo_route
+#          uri: http://127.0.0.1:8082
+          uri: lb://demo-service
+          predicates:
+            - Path= /api/v1/demo/**
+          filters:
+            - StripPrefix=1  # 去除/api去请求后端服务
+
+# 全局CORS配置（解决前端跨域问题）
+globalcors:
+  cors-configurations:
+    '[/**]':
+      allowedOrigins: "https://your-frontend.com"
+      allowedMethods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+      allowedHeaders: "*"
+      allowCredentials: true
+
+# gateway 日志配置--通过logback-spring.xml配置
+# 全局配置
+# gateway actuator配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+# 网关过滤器白名单路径
+whitelist:
+  uri:
+    - /api/v1/auth/**
+    - /api/v1/public/**
+
+# feign+sentinel
+feign:
+  sentinel:
+    enabled: true

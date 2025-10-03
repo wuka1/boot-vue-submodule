@@ -1,0 +1,4 @@
+2025-08-05 09:26:30.864 INFO TimeUtil switches to PREPARE for better performance, reads=220990/s, writes=220990/s
+2025-08-05 09:26:33.876 INFO TimeUtil switches to IDLE due to not enough load, reads=9/s, writes=77/s
+2025-08-05 14:15:51.640 INFO TimeUtil switches to PREPARE for better performance, reads=42920/s, writes=42920/s
+2025-08-05 14:15:54.657 INFO TimeUtil switches to IDLE due to not enough load, reads=9/s, writes=69/s

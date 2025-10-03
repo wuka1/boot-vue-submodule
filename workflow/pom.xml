@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>boot-modules</artifactId>
+        <groupId>com.example</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>workflow</artifactId>
+    <packaging>jar</packaging>
+    <name>workflow</name>
+    <description>workflow</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.6.13</spring-boot.version>
+        <camunda.spring-boot.version>7.17.0</camunda.spring-boot.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--流程引擎：camunda-bpm-spring-boot-starter-->
+        <dependency>
+            <groupId>org.camunda.bpm.springboot</groupId>
+            <artifactId>camunda-bpm-spring-boot-starter</artifactId>
+            <version>${camunda.spring-boot.version}</version>
+        </dependency>
+        <!--Rest服务接口-->
+        <dependency>
+            <groupId>org.camunda.bpm.springboot</groupId>
+            <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
+            <version>${camunda.spring-boot.version}</version>
+        </dependency>
+        <!--web界面模块-->
+        <dependency>
+            <groupId>org.camunda.bpm.springboot</groupId>
+            <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
+            <version>${camunda.spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.camunda.bpm</groupId>
+            <artifactId>camunda-engine-plugin-spin</artifactId>
+            <version>${camunda.spring-boot.version}</version>
+        </dependency>
+
+
+        <!--        <dependency>-->
+<!--            <groupId>org.camunda.spin</groupId>-->
+<!--            <artifactId>camunda-spin-dataformat-all</artifactId>-->
+<!--            <version>${camunda.spring-boot.version}</version>-->
+<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.sun.xml.bind</groupId>-->
+        <!--            <artifactId>jaxb-impl</artifactId>-->
+        <!--            <version>4.0.3</version>-->
+        <!--        </dependency>-->
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

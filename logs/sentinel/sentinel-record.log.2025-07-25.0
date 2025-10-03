@@ -1,0 +1,7 @@
+2025-07-25 15:47:00.209 INFO [GatewayRuleManager] No gateway rules, clearing parameter metrics of previous rules
+2025-07-25 15:47:00.209 INFO [GatewayRuleManager] Gateway flow rules loaded: {}
+2025-07-25 15:47:00.210 INFO [DynamicSentinelProperty] Config will be updated to: [GatewayFlowRule{resource='demo_route', resourceMode=0, grade=1, count=1.0, intervalSec=1, controlBehavior=0, burst=0, maxQueueingTimeoutMs=500, paramItem=null}]
+2025-07-25 15:47:00.211 INFO [GatewayRuleManager] Converted internal param rules: {demo_route=[ParamFlowRule{grade=1, paramIdx=0, count=1.0, controlBehavior=0, maxQueueingTimeMs=500, burstCount=0, durationInSec=1, paramFlowItemList=[], clusterMode=false, clusterConfig=null}]}
+2025-07-25 15:47:00.212 INFO [GatewayRuleManager] Gateway flow rules received: {demo_route=[GatewayFlowRule{resource='demo_route', resourceMode=0, grade=1, count=1.0, intervalSec=1, controlBehavior=0, burst=0, maxQueueingTimeoutMs=500, paramItem=null}]}
+2025-07-25 15:47:02.038 INFO App name resolved from default: com.example.gateway.GatewayApplication
+2025-07-25 15:47:02.038 INFO [SentinelConfig] Application type resolved: 11

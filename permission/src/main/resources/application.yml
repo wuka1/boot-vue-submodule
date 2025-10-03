@@ -1,0 +1,13 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+# github OAuth2配置
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Ov23likpAeg2vHRF87Cc
+            clientSecret: 6c9a1b2c489fcbb7a58d79ad7f786907b4391b36

@@ -1,0 +1,567 @@
+2025-08-01 15:31:58.738 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-08-01 15:31:58.766 [background-preinit]  INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-08-01 15:31:58.806 [main]  INFO  com.example.auth.AuthGrayApplication - Starting AuthGrayApplication using Java 1.8.0_391 on wuka-pc with PID 7668 (E:\javaWorkspace\boot-modules\auth-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-08-01 15:31:58.806 [main]  DEBUG com.example.auth.AuthGrayApplication - Running with Spring Boot v2.7.17, Spring v5.3.30
+2025-08-01 15:31:58.806 [main]  INFO  com.example.auth.AuthGrayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-01 15:31:59.604 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-01 15:31:59.606 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-01 15:31:59.631 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-08-01 15:31:59.833 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=88a5e7af-f5d8-3e35-9ea5-ed9bf9aec897
+2025-08-01 15:32:00.250 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2025-08-01 15:32:00.257 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2025-08-01 15:32:00.258 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-01 15:32:00.258 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-08-01 15:32:00.381 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-01 15:32:00.381 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1542 ms
+2025-08-01 15:32:01.123 [main]  INFO  org.redisson.Version - Redisson 3.23.5
+2025-08-01 15:32:01.502 [redisson-netty-2-5]  INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 15:32:01.548 [redisson-netty-2-20]  INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 15:32:01.679 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.UserRoleEntity".
+2025-08-01 15:32:01.679 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.UserRoleEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 15:32:01.692 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.RolePermissionEntity".
+2025-08-01 15:32:01.692 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.RolePermissionEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 15:32:01.829 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/auth/**']
+2025-08-01 15:32:01.836 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/public/**']
+2025-08-01 15:32:01.836 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [authenticated] for any request
+2025-08-01 15:32:01.842 [main]  INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ba9f743, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7535f28, org.springframework.security.web.context.SecurityContextPersistenceFilter@303fbc4, org.springframework.security.web.header.HeaderWriterFilter@4caf875c, org.springframework.security.web.authentication.logout.LogoutFilter@4a2653a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@aa23f11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65a80fdb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75f65d54, org.springframework.security.web.session.SessionManagementFilter@5c0272e0, org.springframework.security.web.access.ExceptionTranslationFilter@6ad3fbe4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3eadad14]
+2025-08-01 15:32:02.056 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-08-01 15:32:02.059 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-08-01 15:32:03.179 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-01 15:32:03.188 [main]  INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-01 15:32:03.286 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2025-08-01 15:32:03.294 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2025-08-01 15:32:03.331 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-01 15:32:03.331 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-01 15:32:04.448 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP auth-service 192.168.100.200:8084 register finished
+2025-08-01 15:32:04.640 [main]  INFO  com.example.auth.AuthGrayApplication - Started AuthGrayApplication in 6.43 seconds (JVM running for 7.1)
+2025-08-01 15:32:05.110 [RMI TCP Connection(1)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-01 15:32:05.219 [RMI TCP Connection(1)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-01 15:32:05.340 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-01 15:32:05.340 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-01 15:32:05.342 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-01 15:32:36.885 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 15:32:36.887 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:32:36.889 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:32:36.894 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 15:32:36.895 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 15:32:37.050 [http-nio-8084-exec-1]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:32:37.125 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 15:32:37.142 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 15:32:37.162 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 15:32:38.481 [http-nio-8084-exec-1]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 15:32:38.562 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:32:59.268 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:32:59.268 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:32:59.268 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:32:59.269 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:32:59.270 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:32:59.306 [http-nio-8084-exec-3]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:32:59.307 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:32:59.308 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:32:59.310 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:32:59.317 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:32:59.318 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:32:59.322 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:32:59.333 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:32:59.334 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:32:59.335 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:32:59.338 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:33:53.568 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:33:53.568 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:33:53.568 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:33:53.569 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:33:53.569 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:33:53.570 [http-nio-8084-exec-4]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:33:53.570 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:33:53.572 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:33:53.572 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:33:53.573 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:33:53.573 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:33:53.573 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:33:53.574 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:33:53.574 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:33:53.575 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:33:53.576 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:53:01.559 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:53:01.559 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:53:01.560 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:53:01.560 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:53:01.560 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:53:01.561 [http-nio-8084-exec-6]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:53:01.562 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:53:01.562 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:53:01.564 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:53:01.564 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:53:01.565 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:53:01.566 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:53:01.567 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:53:01.568 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:53:01.569 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:53:01.571 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:53:19.768 [http-nio-8084-exec-7]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:53:19.769 [http-nio-8084-exec-7]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:53:19.769 [http-nio-8084-exec-7]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:53:19.769 [http-nio-8084-exec-7]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:53:19.769 [http-nio-8084-exec-7]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:53:19.770 [http-nio-8084-exec-7]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:53:19.770 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:53:19.771 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:53:19.771 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:53:19.772 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:53:19.772 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:53:19.772 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:53:19.773 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:53:19.773 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:53:19.774 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:53:19.775 [http-nio-8084-exec-7]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:54:22.526 [http-nio-8084-exec-9]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:54:22.526 [http-nio-8084-exec-9]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:54:22.526 [http-nio-8084-exec-9]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:54:22.526 [http-nio-8084-exec-9]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:54:22.526 [http-nio-8084-exec-9]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:54:22.527 [http-nio-8084-exec-9]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:54:22.528 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:54:22.528 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:54:22.529 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:54:22.529 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:54:22.530 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:54:22.530 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:54:22.531 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:54:22.531 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:54:22.533 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:54:22.534 [http-nio-8084-exec-9]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:54:41.676 [http-nio-8084-exec-10]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:54:41.676 [http-nio-8084-exec-10]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:54:41.677 [http-nio-8084-exec-10]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:54:41.677 [http-nio-8084-exec-10]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:54:41.677 [http-nio-8084-exec-10]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:54:41.678 [http-nio-8084-exec-10]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:54:41.679 [http-nio-8084-exec-10]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:54:41.679 [http-nio-8084-exec-10]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:54:41.680 [http-nio-8084-exec-10]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:54:41.681 [http-nio-8084-exec-10]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:54:41.681 [http-nio-8084-exec-10]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:54:41.682 [http-nio-8084-exec-10]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:54:41.682 [http-nio-8084-exec-10]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:54:41.683 [http-nio-8084-exec-10]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:54:41.683 [http-nio-8084-exec-10]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:54:41.685 [http-nio-8084-exec-10]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:03.022 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:03.023 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:03.023 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:03.023 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:03.023 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:03.025 [http-nio-8084-exec-3]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:03.026 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:03.026 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:03.027 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:03.029 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:03.029 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:03.031 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:03.032 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:03.032 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:03.033 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:03.034 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:15.557 [http-nio-8084-exec-2]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:15.557 [http-nio-8084-exec-2]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:15.557 [http-nio-8084-exec-2]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:15.557 [http-nio-8084-exec-2]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:15.557 [http-nio-8084-exec-2]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:15.558 [http-nio-8084-exec-2]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:15.560 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:15.560 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:15.561 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:15.561 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:15.561 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:15.562 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:15.563 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:15.563 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:15.564 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:15.565 [http-nio-8084-exec-2]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:42.935 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:42.935 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:42.936 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:42.936 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:42.936 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:42.937 [http-nio-8084-exec-4]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:42.937 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:42.938 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:42.938 [http-nio-8084-exec-4]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:42.939 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:42.939 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:42.939 [http-nio-8084-exec-4]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:42.940 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:42.940 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:42.941 [http-nio-8084-exec-4]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:42.942 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:46.649 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:46.649 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:46.649 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:46.649 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:46.649 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:46.650 [http-nio-8084-exec-5]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:46.650 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:46.651 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:46.651 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:46.652 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:46.652 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:46.652 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:46.654 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:46.654 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:46.655 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:46.655 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:58.312 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:58.312 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:58.312 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:58.312 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:58.312 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:58.313 [http-nio-8084-exec-6]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:58.313 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:58.313 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:58.314 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:58.315 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:58.315 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:58.315 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:58.316 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:58.316 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:58.316 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:58.317 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:56:59.418 [http-nio-8084-exec-7]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:59.418 [http-nio-8084-exec-7]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:56:59.418 [http-nio-8084-exec-7]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:56:59.418 [http-nio-8084-exec-7]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:56:59.418 [http-nio-8084-exec-7]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:56:59.419 [http-nio-8084-exec-7]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:56:59.420 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:56:59.420 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:56:59.421 [http-nio-8084-exec-7]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:56:59.422 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:56:59.422 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:56:59.423 [http-nio-8084-exec-7]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:56:59.424 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:56:59.424 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:56:59.425 [http-nio-8084-exec-7]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:56:59.426 [http-nio-8084-exec-7]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:57:55.422 [http-nio-8084-exec-8]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:57:55.422 [http-nio-8084-exec-8]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:57:55.422 [http-nio-8084-exec-8]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:57:55.422 [http-nio-8084-exec-8]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:57:55.422 [http-nio-8084-exec-8]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:57:55.424 [http-nio-8084-exec-8]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:57:55.424 [http-nio-8084-exec-8]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:57:55.425 [http-nio-8084-exec-8]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:57:55.426 [http-nio-8084-exec-8]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:57:55.426 [http-nio-8084-exec-8]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:57:55.426 [http-nio-8084-exec-8]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:57:55.429 [http-nio-8084-exec-8]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:57:55.430 [http-nio-8084-exec-8]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:57:55.430 [http-nio-8084-exec-8]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:57:55.431 [http-nio-8084-exec-8]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:57:55.432 [http-nio-8084-exec-8]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 15:57:57.441 [http-nio-8084-exec-9]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:57:57.441 [http-nio-8084-exec-9]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 15:57:57.441 [http-nio-8084-exec-9]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 15:57:57.441 [http-nio-8084-exec-9]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 15:57:57.441 [http-nio-8084-exec-9]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 15:57:57.442 [http-nio-8084-exec-9]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 15:57:57.443 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 15:57:57.443 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 15:57:57.444 [http-nio-8084-exec-9]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 15:57:57.444 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 15:57:57.445 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 15:57:57.445 [http-nio-8084-exec-9]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 15:57:57.446 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 15:57:57.446 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 15:57:57.446 [http-nio-8084-exec-9]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 15:57:57.447 [http-nio-8084-exec-9]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:08:12.156 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 16:08:12.157 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:08:12.157 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:08:12.157 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 16:08:12.157 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 16:08:12.162 [http-nio-8084-exec-1]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:08:12.165 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 16:08:12.165 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 16:08:12.169 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 16:08:12.170 [http-nio-8084-exec-1]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 16:08:12.173 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:08:51.906 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:08:51.907 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:08:51.907 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:08:51.907 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 16:08:51.907 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:08:51.908 [http-nio-8084-exec-3]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:08:51.909 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 16:08:51.909 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 16:08:51.911 [http-nio-8084-exec-3]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 16:08:51.912 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 16:08:51.912 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 16:08:51.913 [http-nio-8084-exec-3]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 16:08:51.913 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 16:08:51.914 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 16:08:51.914 [http-nio-8084-exec-3]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 16:08:51.915 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:10:15.051 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:10:15.051 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:10:15.051 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:10:15.052 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 16:10:15.052 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:10:15.056 [http-nio-8084-exec-5]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:10:15.057 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 16:10:15.057 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 16:10:15.058 [http-nio-8084-exec-5]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 16:10:15.059 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 16:10:15.060 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 16:10:15.061 [http-nio-8084-exec-5]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 16:10:15.062 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 16:10:15.064 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 16:10:15.065 [http-nio-8084-exec-5]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 16:10:15.066 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:11:08.378 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:11:08.378 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:11:08.378 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:11:08.379 [http-nio-8084-exec-6]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 16:11:08.379 [http-nio-8084-exec-6]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:11:08.380 [http-nio-8084-exec-6]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:11:08.380 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 16:11:08.380 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 16:11:08.381 [http-nio-8084-exec-6]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 16:11:08.382 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 16:11:08.382 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 16:11:08.382 [http-nio-8084-exec-6]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 16:11:08.384 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 16:11:08.384 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 16:11:08.385 [http-nio-8084-exec-6]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 16:11:08.386 [http-nio-8084-exec-6]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:18:55.682 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-01 16:18:55.682 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-01 16:18:55.682 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-01 16:18:55.682 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-01 16:18:55.867 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-01 16:18:55.871 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-08-01 16:18:55.903 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-01 16:18:55.906 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-01 16:19:04.790 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-08-01 16:19:04.820 [background-preinit]  INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-08-01 16:19:04.865 [main]  INFO  com.example.auth.AuthGrayApplication - Starting AuthGrayApplication using Java 1.8.0_391 on wuka-pc with PID 24308 (E:\javaWorkspace\boot-modules\auth-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-08-01 16:19:04.865 [main]  DEBUG com.example.auth.AuthGrayApplication - Running with Spring Boot v2.7.17, Spring v5.3.30
+2025-08-01 16:19:04.865 [main]  INFO  com.example.auth.AuthGrayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-01 16:19:05.749 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-01 16:19:05.751 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-01 16:19:05.780 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2025-08-01 16:19:06.012 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=03f932af-15be-3457-84e0-db69154c3bf5
+2025-08-01 16:19:06.415 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2025-08-01 16:19:06.420 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2025-08-01 16:19:06.421 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-01 16:19:06.421 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-08-01 16:19:06.546 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-01 16:19:06.546 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1646 ms
+2025-08-01 16:19:07.228 [main]  INFO  org.redisson.Version - Redisson 3.23.5
+2025-08-01 16:19:07.644 [redisson-netty-2-5]  INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 16:19:07.699 [redisson-netty-2-20]  INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 16:19:07.844 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.UserRoleEntity".
+2025-08-01 16:19:07.845 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.UserRoleEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 16:19:07.858 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.RolePermissionEntity".
+2025-08-01 16:19:07.859 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.RolePermissionEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 16:19:07.989 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/auth/**']
+2025-08-01 16:19:07.998 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/public/**']
+2025-08-01 16:19:07.998 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [authenticated] for any request
+2025-08-01 16:19:08.004 [main]  INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7aa63f50, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@142918a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c49ea0c, org.springframework.security.web.header.HeaderWriterFilter@1123d461, org.springframework.security.web.authentication.logout.LogoutFilter@61be6051, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20be793a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a4cb8ae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@745cf754, org.springframework.security.web.session.SessionManagementFilter@7e2a76be, org.springframework.security.web.access.ExceptionTranslationFilter@54a5496f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d2e65bd]
+2025-08-01 16:19:08.267 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-08-01 16:19:08.269 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-08-01 16:19:09.422 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-01 16:19:09.433 [main]  INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-01 16:19:09.532 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2025-08-01 16:19:09.540 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2025-08-01 16:19:09.577 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-01 16:19:09.577 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-01 16:19:10.593 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP auth-service 192.168.100.200:8084 register finished
+2025-08-01 16:19:10.836 [main]  INFO  com.example.auth.AuthGrayApplication - Started AuthGrayApplication in 6.575 seconds (JVM running for 7.364)
+2025-08-01 16:19:11.530 [RMI TCP Connection(6)-192.168.100.200]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-01 16:19:11.530 [RMI TCP Connection(6)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-01 16:19:11.531 [RMI TCP Connection(6)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-01 16:19:11.550 [RMI TCP Connection(7)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-01 16:19:11.680 [RMI TCP Connection(7)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-01 16:21:21.271 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:21:21.274 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:21:21.276 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:21:21.282 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 16:21:21.282 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:21:21.424 [http-nio-8084-exec-1]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:21:21.444 [http-nio-8084-exec-1]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 16:21:21.463 [http-nio-8084-exec-1]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 16:21:21.487 [http-nio-8084-exec-1]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 16:21:21.519 [http-nio-8084-exec-1]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 16:21:21.519 [http-nio-8084-exec-1]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 16:21:21.522 [http-nio-8084-exec-1]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 16:21:21.547 [http-nio-8084-exec-1]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 16:21:21.548 [http-nio-8084-exec-1]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 16:21:21.549 [http-nio-8084-exec-1]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 16:21:21.571 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:22:42.740 [http-nio-8084-exec-2]  DEBUG o.s.security.web.FilterChainProxy - Securing GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:22:42.740 [http-nio-8084-exec-2]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 16:22:42.744 [http-nio-8084-exec-2]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 16:22:42.746 [http-nio-8084-exec-2]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [GET /v1/auth/check?username=admin&uri=/api/test&method=Get] with attributes [permitAll]
+2025-08-01 16:22:42.746 [http-nio-8084-exec-2]  DEBUG o.s.security.web.FilterChainProxy - Secured GET /v1/auth/check?username=admin&uri=/api/test&method=Get
+2025-08-01 16:22:42.749 [http-nio-8084-exec-2]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 16:22:42.750 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==>  Preparing: SELECT ur.role_id FROM user_role ur WHERE ur.user_id = (SELECT u.id from user u where u.username=? limit 1)
+2025-08-01 16:22:42.752 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - ==> Parameters: admin(String)
+2025-08-01 16:22:42.757 [http-nio-8084-exec-2]  DEBUG c.e.a.m.U.selectRoleIdsByUsername - <==      Total: 1
+2025-08-01 16:22:42.758 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==>  Preparing: SELECT permission_id FROM role_permission WHERE role_id IN ( ? )
+2025-08-01 16:22:42.758 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - ==> Parameters: 1(Long)
+2025-08-01 16:22:42.760 [http-nio-8084-exec-2]  DEBUG c.e.a.m.R.selectPermissionIdsByRoleIds - <==      Total: 1
+2025-08-01 16:22:42.762 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==>  Preparing: SELECT COUNT( * ) AS total FROM permission WHERE deleted=0 AND (id IN (?) AND uri = ? AND method = ?)
+2025-08-01 16:22:42.762 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - ==> Parameters: 1(Long), /api/test(String), Get(String)
+2025-08-01 16:22:42.763 [http-nio-8084-exec-2]  DEBUG c.e.a.m.PermissionMapper.selectCount - <==      Total: 1
+2025-08-01 16:22:42.765 [http-nio-8084-exec-2]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 16:24:49.700 [Thread-19]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-01 16:24:49.700 [Thread-16]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-01 16:24:49.701 [Thread-16]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-01 16:24:49.703 [Thread-19]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-01 16:24:49.868 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-01 16:24:49.874 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-08-01 16:24:49.908 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-01 16:24:49.915 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-01 16:24:56.039 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-08-01 16:24:56.068 [background-preinit]  INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-08-01 16:24:56.109 [main]  INFO  com.example.auth.AuthGrayApplication - Starting AuthGrayApplication using Java 1.8.0_391 on wuka-pc with PID 26716 (E:\javaWorkspace\boot-modules\auth-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-08-01 16:24:56.110 [main]  DEBUG com.example.auth.AuthGrayApplication - Running with Spring Boot v2.7.17, Spring v5.3.30
+2025-08-01 16:24:56.110 [main]  INFO  com.example.auth.AuthGrayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-01 16:24:56.963 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-01 16:24:56.963 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-01 16:24:56.998 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-08-01 16:24:57.185 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=03f932af-15be-3457-84e0-db69154c3bf5
+2025-08-01 16:24:57.600 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2025-08-01 16:24:57.606 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2025-08-01 16:24:57.606 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-01 16:24:57.606 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-08-01 16:24:57.728 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-01 16:24:57.728 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1586 ms
+2025-08-01 16:24:58.422 [main]  INFO  org.redisson.Version - Redisson 3.23.5
+2025-08-01 16:24:58.789 [redisson-netty-2-5]  INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 16:24:58.838 [redisson-netty-2-20]  INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 16:24:58.975 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.UserRoleEntity".
+2025-08-01 16:24:58.975 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.UserRoleEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 16:24:58.988 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.RolePermissionEntity".
+2025-08-01 16:24:58.988 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.RolePermissionEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 16:24:59.138 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/auth/**']
+2025-08-01 16:24:59.146 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/public/**']
+2025-08-01 16:24:59.146 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [authenticated] for any request
+2025-08-01 16:24:59.151 [main]  INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@390a7532, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@595184d8, org.springframework.security.web.context.SecurityContextPersistenceFilter@577cf459, org.springframework.security.web.header.HeaderWriterFilter@2fca282c, org.springframework.security.web.authentication.logout.LogoutFilter@6b899971, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69372c1e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24842b8e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d49a1a0, org.springframework.security.web.session.SessionManagementFilter@2dc73024, org.springframework.security.web.access.ExceptionTranslationFilter@1800c1e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35d0749]
+2025-08-01 16:24:59.383 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-08-01 16:24:59.385 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-08-01 16:25:00.525 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-01 16:25:00.535 [main]  INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-01 16:25:00.633 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2025-08-01 16:25:00.641 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2025-08-01 16:25:00.676 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-01 16:25:00.676 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-01 16:25:01.725 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP auth-service 192.168.100.200:8084 register finished
+2025-08-01 16:25:01.925 [main]  INFO  com.example.auth.AuthGrayApplication - Started AuthGrayApplication in 6.446 seconds (JVM running for 7.197)
+2025-08-01 16:25:02.209 [RMI TCP Connection(1)-192.168.100.200]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-01 16:25:02.210 [RMI TCP Connection(1)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-01 16:25:02.211 [RMI TCP Connection(1)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-08-01 16:25:02.227 [RMI TCP Connection(2)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-01 16:25:02.335 [RMI TCP Connection(2)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-01 17:12:11.205 [HikariPool-1 housekeeper]  WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m43s788ms426µs).
+2025-08-01 17:24:18.290 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-01 17:24:18.293 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-01 17:24:18.291 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-01 17:24:18.294 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-01 17:24:18.439 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-01 17:24:18.442 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-08-01 17:24:18.467 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-01 17:24:18.470 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-08-01 17:24:23.222 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-08-01 17:24:23.253 [background-preinit]  INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2025-08-01 17:24:23.294 [main]  INFO  com.example.auth.AuthGrayApplication - Starting AuthGrayApplication using Java 1.8.0_391 on wuka-pc with PID 33036 (E:\javaWorkspace\boot-modules\auth-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-08-01 17:24:23.294 [main]  DEBUG com.example.auth.AuthGrayApplication - Running with Spring Boot v2.7.17, Spring v5.3.30
+2025-08-01 17:24:23.294 [main]  INFO  com.example.auth.AuthGrayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-01 17:24:24.163 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-01 17:24:24.165 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-01 17:24:24.198 [main]  INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2025-08-01 17:24:24.397 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=03f932af-15be-3457-84e0-db69154c3bf5
+2025-08-01 17:24:24.844 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+2025-08-01 17:24:24.852 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+2025-08-01 17:24:24.853 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-08-01 17:24:24.853 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-08-01 17:24:25.010 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-08-01 17:24:25.010 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1684 ms
+2025-08-01 17:24:25.694 [main]  INFO  org.redisson.Version - Redisson 3.23.5
+2025-08-01 17:24:26.067 [redisson-netty-2-5]  INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 17:24:26.118 [redisson-netty-2-20]  INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for localhost/127.0.0.1:6379
+2025-08-01 17:24:26.281 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.UserRoleEntity".
+2025-08-01 17:24:26.281 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.UserRoleEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 17:24:26.294 [main]  WARN  c.b.m.core.metadata.TableInfoHelper - Can not find table primary key in Class: "com.example.auth.entity.RolePermissionEntity".
+2025-08-01 17:24:26.294 [main]  WARN  c.b.m.c.injector.DefaultSqlInjector - class com.example.auth.entity.RolePermissionEntity ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2025-08-01 17:24:26.434 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/auth/**']
+2025-08-01 17:24:26.442 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [permitAll] for Ant [pattern='/v1/public/**']
+2025-08-01 17:24:26.442 [main]  DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression [authenticated] for any request
+2025-08-01 17:24:26.448 [main]  INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5db04bd2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6f921e32, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e013ba1, org.springframework.security.web.header.HeaderWriterFilter@61d6c8c4, org.springframework.security.web.authentication.logout.LogoutFilter@6d4c18b8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@740ee00f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@430106cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31c5304f, org.springframework.security.web.session.SessionManagementFilter@7e1fb22c, org.springframework.security.web.access.ExceptionTranslationFilter@2e66f1bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@490d9c41]
+2025-08-01 17:24:26.677 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-08-01 17:24:26.679 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-08-01 17:24:27.856 [main]  WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-08-01 17:24:27.867 [main]  INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-08-01 17:24:27.969 [main]  INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+2025-08-01 17:24:27.979 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path ''
+2025-08-01 17:24:28.023 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-08-01 17:24:28.023 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-08-01 17:24:29.108 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP auth-service 192.168.100.200:8084 register finished
+2025-08-01 17:24:29.309 [main]  INFO  com.example.auth.AuthGrayApplication - Started AuthGrayApplication in 6.644 seconds (JVM running for 7.353)
+2025-08-01 17:24:29.875 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-01 17:24:29.875 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-08-01 17:24:29.877 [RMI TCP Connection(3)-192.168.100.200]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-08-01 17:24:29.902 [RMI TCP Connection(4)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-01 17:24:30.068 [RMI TCP Connection(4)-192.168.100.200]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-01 17:46:09.070 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 17:46:09.073 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 17:46:09.076 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 17:46:09.082 [http-nio-8084-exec-1]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 17:46:09.083 [http-nio-8084-exec-1]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 17:46:09.240 [http-nio-8084-exec-1]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 17:46:09.325 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 17:46:09.345 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 17:46:09.367 [http-nio-8084-exec-1]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 17:46:09.924 [http-nio-8084-exec-1]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 17:46:09.961 [http-nio-8084-exec-1]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 17:54:16.816 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 17:54:16.816 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 17:54:16.817 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 17:54:16.817 [http-nio-8084-exec-3]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 17:54:16.817 [http-nio-8084-exec-3]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 17:54:16.819 [http-nio-8084-exec-3]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 17:54:16.821 [http-nio-8084-exec-3]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 17:54:16.821 [http-nio-8084-exec-3]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 17:54:16.824 [http-nio-8084-exec-3]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 17:54:16.825 [http-nio-8084-exec-3]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 17:54:16.828 [http-nio-8084-exec-3]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 17:54:33.617 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 17:54:33.617 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 17:54:33.617 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 17:54:33.617 [http-nio-8084-exec-4]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 17:54:33.618 [http-nio-8084-exec-4]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 17:54:33.618 [http-nio-8084-exec-4]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 17:54:33.621 [http-nio-8084-exec-4]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 17:54:33.622 [http-nio-8084-exec-4]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 17:54:33.624 [http-nio-8084-exec-4]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 17:54:33.624 [http-nio-8084-exec-4]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 17:54:33.634 [http-nio-8084-exec-4]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 17:54:36.940 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Securing POST /v1/auth/login
+2025-08-01 17:54:36.940 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Set SecurityContextHolder to empty SecurityContext
+2025-08-01 17:54:36.940 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-08-01 17:54:36.940 [http-nio-8084-exec-5]  DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorized filter invocation [POST /v1/auth/login] with attributes [permitAll]
+2025-08-01 17:54:36.940 [http-nio-8084-exec-5]  DEBUG o.s.security.web.FilterChainProxy - Secured POST /v1/auth/login
+2025-08-01 17:54:36.941 [http-nio-8084-exec-5]  INFO  c.e.auth.controller.AuthController - ----------------gray--------------------
+2025-08-01 17:54:36.942 [http-nio-8084-exec-5]  DEBUG c.e.a.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,password,nickname,tenant_id,enabled,deleted,tenant_id,create_time,update_time FROM user WHERE deleted=0 AND (username = ?)
+2025-08-01 17:54:36.942 [http-nio-8084-exec-5]  DEBUG c.e.a.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-08-01 17:54:36.944 [http-nio-8084-exec-5]  DEBUG c.e.a.mapper.UserMapper.selectList - <==      Total: 1
+2025-08-01 17:54:36.944 [http-nio-8084-exec-5]  INFO  com.example.common.utils.JwtUtil - 生成refresh token成功
+2025-08-01 17:54:36.946 [http-nio-8084-exec-5]  DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - Cleared SecurityContextHolder to complete request
+2025-08-01 18:00:25.863 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-01 18:00:25.863 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-01 18:00:25.863 [Thread-17]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-01 18:00:25.865 [Thread-20]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-01 18:00:26.311 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-01 18:00:26.319 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-08-01 18:00:26.369 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-01 18:00:26.374 [SpringApplicationShutdownHook]  INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
