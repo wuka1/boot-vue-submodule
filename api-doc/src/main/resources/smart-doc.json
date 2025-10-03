@@ -1,0 +1,24 @@
+{
+  "serverUrl": "http://localhost:8080",
+  "allInOne": true,
+  "outPath": "target/smart-doc",
+  "coverOld": true,
+  "style": "xt256",
+  "template": "rest",
+  "projectName": "微服务系统文档",
+  "skipTransientField": true,
+  "sortPackages": true,
+  "sortByTitle": false,
+  "requestExample": true,
+  "responseExample": true,
+  "packageGroup": [
+    {
+      "packagePrefix": "com.example.auth",
+      "title": "认证鉴权模块"
+    },
+    {
+      "packagePrefix": "com.example.demoservice",
+      "title": "业务服务模块"
+    }
+  ]
+}

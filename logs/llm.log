@@ -1,0 +1,4 @@
+2025-08-18 09:38:40.794 [main]  INFO  com.example.llm.LlmApplication - Starting LlmApplication using Java 1.8.0_391 on wuka-pc with PID 21096 (E:\javaWorkspace\boot-modules\llm\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-08-18 09:38:40.801 [main]  INFO  com.example.llm.LlmApplication - No active profile set, falling back to 1 default profile: "default"
+2025-08-18 09:38:43.006 [main]  INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8090
+2025-08-18 09:38:43.022 [main]  INFO  com.example.llm.LlmApplication - Started LlmApplication in 2.989 seconds (JVM running for 8.189)

@@ -4,12 +4,34 @@ server:
 #  servlet:
 #    context-path: /api
 
-# AOP 配置
 spring:
-  aop:
+  aop:                                        # aop
     auto: true
-
+  application:
+    name: demo-service
+  cloud:
+    nacos:                                    # nacos
+      discovery:
+        group: DEFAULT_GROUP
+        server-addr: 127.0.0.1:8848
+        namespace: public
+    loadbalancer:
+      cache:
+        enabled: true   # 开启caffeine缓存
+        capacity: 500
+        ttl: 30s
+# 服务注册
 # 权限服务地址
 auth:
   service:
-    url: http://127.0.0.1:8081/v1
+    url: auth-service
+#    url: http://127.0.0.1:8081/v1
+
+# feign配置
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 1000
+        read-timeout: 2000
+#        loggerLevel: FULL

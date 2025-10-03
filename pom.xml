@@ -5,7 +5,7 @@
     <groupId>com.example</groupId>
     <artifactId>boot-modules</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <!-- 继承 Spring Boot 父工程 -->
     <parent>
@@ -24,17 +24,22 @@
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
         <mysql.driver.version>9.3.0</mysql.driver.version>
         <java.version>1.8</java.version>
+        <redission.version>3.23.5</redission.version>
+        <smartdoc.version>3.1.0</smartdoc.version>
     </properties>
 
     <modules>
         <module>vue</module>
         <module>common</module>
+        <module>gray-common</module>
         <module>workflow</module>
-        <module>permission</module>
-        <module>cache-manager</module>
         <module>gateway</module>
         <module>auth</module>
+        <module>auth-gray</module>
         <module>demo-service</module>
+        <module>demo-service-gray</module>
+        <module>distributed</module>
+        <module>llm</module>
         <!--        <module>mq-manager</module>-->
     </modules>
 
@@ -79,6 +84,11 @@
                 <artifactId>guava</artifactId>
                 <version>33.2.1-jre</version>
             </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redission.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <!-- 公共插件管理 -->
@@ -101,6 +111,13 @@
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
+                <!--smart-doc-->
+<!--                <plugin>-->
+<!--                    <groupId>com.ly.smart-doc</groupId>-->
+<!--                    <artifactId>smart-doc-maven-plugin</artifactId>-->
+<!--                    <version>${smartdoc.version}</version>-->
+<!--                </plugin>-->
+
             </plugins>
         </pluginManagement>
     </build>

@@ -1,7 +1,7 @@
 package com.example.gateway.api;
 
-import com.example.gateway.common.R;
 import com.example.gateway.dto.AuthResponseDTO;
+import com.example.gateway.util.R;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -21,8 +21,8 @@ public class AuthClient {
 
     public AuthClient(WebClient.Builder webClientBuilder) {
         this.webClient = webClientBuilder
-//                .baseUrl("http://auth-service") // 注册中心中的服务名
-                .baseUrl("http://127.0.0.1:8081/v1") // 注册中心中的服务名
+                .baseUrl("http://auth-service/v1") // 注册中心中的服务名
+//                .baseUrl("http://127.0.0.1:8081/v1") // 本地连接
                 .build();
     }
 

@@ -1,0 +1,216 @@
+2025-07-31 14:06:22.688 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 14:06:22.761 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 1948 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 14:06:22.762 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 14:06:23.302 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=741bb32f-122a-363a-bf8d-717feb9bfd0a
+2025-07-31 14:06:23.612 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 14:06:23.618 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 14:06:23.618 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 14:06:23.750 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 14:06:23.750 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 931 ms
+2025-07-31 14:06:23.934 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 14:06:24.101 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 14:06:24.102 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 14:06:24.885 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 14:06:24.922 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 14:06:24.922 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 14:06:26.000 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8082 register finished
+2025-07-31 14:06:26.184 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 4.026 seconds (JVM running for 7.045)
+2025-07-31 14:27:39.735 [Thread-14]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 14:27:39.735 [Thread-11]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 14:27:39.735 [Thread-11]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 14:27:39.736 [Thread-14]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 14:27:39.878 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 14:27:39.884 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 14:27:45.128 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 14:27:45.194 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 31516 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 14:27:45.195 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 14:27:45.738 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=741bb32f-122a-363a-bf8d-717feb9bfd0a
+2025-07-31 14:27:46.047 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 14:27:46.053 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 14:27:46.054 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 14:27:46.174 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 14:27:46.174 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 924 ms
+2025-07-31 14:27:46.398 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 14:27:46.561 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 14:27:46.562 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 14:27:47.422 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 14:27:47.453 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 14:27:47.453 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 14:27:48.420 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8082 register finished
+2025-07-31 14:27:48.604 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 4.029 seconds (JVM running for 4.699)
+2025-07-31 14:29:45.042 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 14:29:45.042 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 14:29:45.042 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 14:29:45.043 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 14:29:45.202 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 14:29:45.208 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 14:29:48.210 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 14:29:48.268 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 33668 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 14:29:48.269 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 14:29:48.770 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=741bb32f-122a-363a-bf8d-717feb9bfd0a
+2025-07-31 14:29:49.038 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 14:29:49.043 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 14:29:49.043 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 14:29:49.155 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 14:29:49.155 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 833 ms
+2025-07-31 14:29:49.357 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 14:29:49.499 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 14:29:49.500 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 14:29:50.250 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 14:29:50.289 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 14:29:50.290 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 14:29:51.296 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8082 register finished
+2025-07-31 14:29:51.486 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 3.804 seconds (JVM running for 4.391)
+2025-07-31 16:19:14.052 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 16:19:14.052 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 16:19:14.055 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 16:19:14.056 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 16:19:14.217 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 16:19:14.231 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 17:01:05.874 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:01:05.941 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 8208 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:01:05.942 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:01:06.525 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a1b98c32-0986-3749-9bc2-6a10a5ecf06e
+2025-07-31 17:01:06.838 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 17:01:06.845 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:01:06.846 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:01:06.977 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:01:06.977 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 960 ms
+2025-07-31 17:01:07.189 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:01:07.351 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:01:07.352 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:01:08.133 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 17:01:08.171 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:01:08.171 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:01:09.241 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP common 192.168.100.200:8082 register finished
+2025-07-31 17:01:09.469 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 4.176 seconds (JVM running for 4.859)
+2025-07-31 17:02:11.765 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:02:11.823 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 22376 (E:\javaWorkspace\boot-modules\demo-service-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:02:11.824 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:02:12.338 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a1b98c32-0986-3749-9bc2-6a10a5ecf06e
+2025-07-31 17:02:12.639 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2025-07-31 17:02:12.646 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:02:12.646 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:02:12.770 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:02:12.770 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 890 ms
+2025-07-31 17:02:12.982 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:02:13.131 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:02:13.132 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:02:13.909 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2025-07-31 17:02:13.941 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:02:13.941 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:02:14.935 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP common 192.168.100.200:8083 register finished
+2025-07-31 17:02:15.117 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 3.888 seconds (JVM running for 4.695)
+2025-07-31 17:02:41.208 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 17:02:41.208 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 17:02:41.209 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 17:02:41.209 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 17:02:41.340 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 17:02:41.346 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 17:02:41.678 [Thread-11]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 17:02:41.678 [Thread-14]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 17:02:41.679 [Thread-11]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 17:02:41.680 [Thread-14]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 17:02:41.825 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 17:02:41.831 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 17:04:11.204 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:04:11.262 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 22632 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:04:11.262 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:04:11.781 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a1b98c32-0986-3749-9bc2-6a10a5ecf06e
+2025-07-31 17:04:12.055 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 17:04:12.062 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:04:12.062 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:04:12.186 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:04:12.186 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 863 ms
+2025-07-31 17:04:12.354 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:04:12.540 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:04:12.541 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:04:13.310 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 17:04:13.342 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:04:13.342 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:04:14.337 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8082 register finished
+2025-07-31 17:04:14.520 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 3.838 seconds (JVM running for 4.898)
+2025-07-31 17:04:36.231 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:04:36.303 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 208 (E:\javaWorkspace\boot-modules\demo-service-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:04:36.304 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:04:36.842 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a1b98c32-0986-3749-9bc2-6a10a5ecf06e
+2025-07-31 17:04:37.118 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2025-07-31 17:04:37.124 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:04:37.124 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:04:37.237 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:04:37.237 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 875 ms
+2025-07-31 17:04:37.447 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:04:37.598 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:04:37.599 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:04:38.360 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2025-07-31 17:04:38.390 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:04:38.390 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:04:39.390 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8083 register finished
+2025-07-31 17:04:39.574 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 3.948 seconds (JVM running for 4.981)
+2025-07-31 17:36:33.014 [http-nio-8083-exec-1]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 17:36:33.014 [http-nio-8083-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-31 17:36:33.015 [http-nio-8083-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-31 17:36:33.148 [http-nio-8083-exec-1]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-07-31 17:37:17.528 [http-nio-8082-exec-2]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 17:37:17.529 [http-nio-8082-exec-2]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-31 17:37:17.531 [http-nio-8082-exec-2]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-07-31 17:37:17.657 [http-nio-8082-exec-2]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-07-31 17:41:01.293 [http-nio-8082-exec-3]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-07-31 17:41:54.693 [http-nio-8083-exec-3]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-07-31 17:47:59.038 [http-nio-8082-exec-5]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-07-31 17:49:53.084 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 17:49:53.084 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 17:49:53.084 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 17:49:53.086 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 17:49:53.220 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 17:49:53.224 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 17:49:53.739 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-07-31 17:49:53.739 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-07-31 17:49:53.740 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-07-31 17:49:53.742 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-07-31 17:49:53.941 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-07-31 17:49:53.946 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+2025-07-31 17:50:32.082 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:50:32.138 [main]  INFO  c.e.d.DemoServiceGrayApplication - Starting DemoServiceGrayApplication using Java 1.8.0_391 on wuka-pc with PID 34248 (E:\javaWorkspace\boot-modules\demo-service-gray\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:50:32.138 [main]  INFO  c.e.d.DemoServiceGrayApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:50:32.688 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3202e973-265a-32a3-860a-7248b2d925b6
+2025-07-31 17:50:32.969 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8083 (http)
+2025-07-31 17:50:32.975 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:50:32.975 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:50:33.112 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:50:33.112 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 901 ms
+2025-07-31 17:50:33.351 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:50:33.505 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:50:33.506 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:50:34.303 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8083 (http) with context path ''
+2025-07-31 17:50:34.333 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:50:34.333 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:50:35.311 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8083 register finished
+2025-07-31 17:50:35.500 [main]  INFO  c.e.d.DemoServiceGrayApplication - Started DemoServiceGrayApplication in 3.936 seconds (JVM running for 4.509)
+2025-07-31 17:50:45.024 [main]  INFO  c.a.n.c.env.SearchableProperties - properties search order:PROPERTIES->JVM->ENV->DEFAULT_SETTING
+2025-07-31 17:50:45.081 [main]  INFO  c.e.d.DemoServiceApplication - Starting DemoServiceApplication using Java 1.8.0_391 on wuka-pc with PID 33744 (E:\javaWorkspace\boot-modules\demo-service\target\classes started by wuka in E:\javaWorkspace\boot-modules)
+2025-07-31 17:50:45.082 [main]  INFO  c.e.d.DemoServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 17:50:45.611 [main]  INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=a1b98c32-0986-3749-9bc2-6a10a5ecf06e
+2025-07-31 17:50:45.885 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8082 (http)
+2025-07-31 17:50:45.891 [main]  INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-07-31 17:50:45.891 [main]  INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.82]
+2025-07-31 17:50:46.005 [main]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-07-31 17:50:46.005 [main]  INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 867 ms
+2025-07-31 17:50:46.207 [main]  INFO  o.s.c.o.FeignClientFactoryBean - For 'auth-service' URL not provided. Will try picking an instance via load-balancing.
+2025-07-31 17:50:46.352 [main]  INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2025-07-31 17:50:46.354 [main]  INFO  c.a.c.s.SentinelWebMvcConfigurer - [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-07-31 17:50:47.210 [main]  INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8082 (http) with context path ''
+2025-07-31 17:50:47.242 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-07-31 17:50:47.242 [main]  INFO  c.a.n.p.a.s.c.ClientAuthPluginManager - [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-07-31 17:50:48.230 [main]  INFO  c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP demo-service 192.168.100.200:8082 register finished
+2025-07-31 17:50:48.424 [main]  INFO  c.e.d.DemoServiceApplication - Started DemoServiceApplication in 3.946 seconds (JVM running for 4.517)
+2025-07-31 17:52:27.316 [http-nio-8082-exec-1]  INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 17:52:27.316 [http-nio-8082-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-07-31 17:52:27.317 [http-nio-8082-exec-1]  INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-07-31 17:52:27.414 [http-nio-8082-exec-1]  INFO  c.e.d.controller.DemoController - 请求参数为:1
+2025-08-01 10:19:21.340 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Start destroying Publisher
+2025-08-01 10:19:21.340 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Start destroying common HttpClient
+2025-08-01 10:19:21.408 [Thread-10]  WARN  c.a.nacos.common.notify.NotifyCenter - [NotifyCenter] Destruction of the end
+2025-08-01 10:19:21.416 [Thread-13]  WARN  c.a.n.c.http.HttpClientBeanHolder - [HttpClientBeanHolder] Destruction of the end
+2025-08-01 10:19:21.864 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+2025-08-01 10:19:21.879 [SpringApplicationShutdownHook]  INFO  c.a.c.n.r.NacosServiceRegistry - De-registration finished.

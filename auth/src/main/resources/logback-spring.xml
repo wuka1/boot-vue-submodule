@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true" scanPeriod="60 seconds">
+
+    <conversionRule conversionWord="desMsg"
+                    converterClass="com.example.auth.log.SensitiveDataConverter"/>
+
     <!-- 定义 CONSOLE appender -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <!-- 使用 Spring Boot 的模式常量 -->
-            <pattern>${LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %highlight(%-5level) %logger{36} - %msg%n}</pattern>
+            <!-- 使用 Spring Boot 的模式常量，日志脱敏时msg-->desMsg -->
+            <pattern>${LOG_PATTERN:-%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %highlight(%-5level) %logger{36} - %desMsg%n}</pattern>
         </encoder>
     </appender>
 

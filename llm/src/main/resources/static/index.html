@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Dify 流式聊天</title>
+    <style>
+        #chat { white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+<h2>流式对话</h2>
+<input type="text" id="input" placeholder="输入你的问题" />
+<button onclick="send()">发送</button>
+<div id="chat"></div>
+
+<script>
+    function send() {
+        const q = document.getElementById('input').value;
+        const chatBox = document.getElementById('chat');
+        chatBox.textContent = '';
+
+        const evtSource = new EventSource(`/api/chat/stream?q=${encodeURIComponent(q)}`);
+
+        evtSource.onmessage = function (event) {
+            chatBox.textContent += event.data;
+        };
+
+        evtSource.onerror = function () {
+            console.error("连接出错");
+            evtSource.close();
+        };
+    }
+</script>
+</body>
+</html>

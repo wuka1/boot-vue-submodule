@@ -1,0 +1,6 @@
+{
+  "projectName": "认证服务接口文档",
+  "outPath": "target/smart-doc",
+  "allInOne": true,
+  "isStrict": false
+}

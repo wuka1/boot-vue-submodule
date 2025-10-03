@@ -42,10 +42,15 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         // 跳过登录和公开端点
         String path = request.getURI().getPath(); //原始请求路径（未经 Gateway 修改）
 //        request.getPath();   // 经过gateway处理后的路径
+        // 灰度逻辑判断--使用本机192.168.100.200测试
+        String grayTag = null;
+        if ("192.168.100.200".equals(request.getRemoteAddress().getAddress().getHostAddress())){
+            grayTag = "gray";
+        }
         // 判断是否在白名单中
         for (String pattern : whitelistProperties.getUri()) {
             if (pathMatcher.match(pattern, path)) {
-                return chain.filter(exchange); // 白名单路径直接放行
+                return chain.filter(addInfoToRequest(exchange, grayTag)); // 白名单路径直接放行
             }
         }
 
@@ -54,19 +59,22 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
         //3.1 判断是否存在
         if (token == null || !token.startsWith("Bearer ")) {
             // 如果不存在 : 认证失败
-            log.warn("token验证失败，token为:" + token);
+            log.error("token验证失败，token为:" + token);
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
             return exchange.getResponse().setComplete(); //请求结束
         }
         //3.2 如果存在,验证jwt
         token = token.substring(7);  // 去掉 "Bearer " 前缀
         if (!jwtUtil.validateToken(token)) { // 如果jwt无效-过期、篡改等
+            log.error("jwt token验证无效");
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED); //返回401
             return exchange.getResponse().setComplete(); //请求结束
         }
+        //3.3 灰度发布特定逻辑
+
         //4. 转发令牌到路由后的服务
-        return chain.filter(addInfoToRequest(exchange, token)); //继续向下执行
-        //方案2: 调用auth服务进行RBAC认证--不合理放置到业务侧调用比较合理
+        return chain.filter(addInfoToRequest(exchange, token, grayTag)); //继续向下执行
+        //方案2: 调用auth服务进行RBAC认证--不合理，放置到业务侧调用比较合理
 //        String username = jwtUtil.getUsername(token);
 //        String uri = request.getURI().getPath();
 //        String method = request.getMethodValue();
@@ -91,13 +99,39 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 //                });
     }
     // 将原始认证信息转发到路由的服务
-    private ServerWebExchange addInfoToRequest(ServerWebExchange exchange, String token) {
+    private ServerWebExchange addInfoToRequest(ServerWebExchange exchange, String token, String grayTag) {
         // 重建请求并添加一些header信息
-        ServerHttpRequest newRequest = exchange.getRequest().mutate()
+        ServerHttpRequest newRequest = null;
+        if (grayTag == null || grayTag.isEmpty()) {
+            newRequest = exchange.getRequest().mutate()
 //                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token) // 不建议直接专递原始的token信息到后端服务
-                .header("X-User-Id", jwtUtil.getUsername(token))
-                .header("X-Tenant-Id", jwtUtil.getTenantID(token))  // 例如灰度发布信息
-                .build();
+                    .header("X-User-Id", jwtUtil.getUsername(token))
+                    .header("X-Tenant-Id", jwtUtil.getTenantID(token))  // 例如灰度发布信息
+                    .build();
+        } else {
+            newRequest = exchange.getRequest().mutate()
+//                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token) // 不建议直接专递原始的token信息到后端服务
+                    .header("X-User-Id", jwtUtil.getUsername(token))
+                    .header("X-Tenant-Id", jwtUtil.getTenantID(token))  // 例如灰度发布信息
+                    .header("X-Traffic-Tag", "gray")
+                    .build();
+        }
+
+        return exchange.mutate().request(newRequest).build();
+    }
+
+    private ServerWebExchange addInfoToRequest(ServerWebExchange exchange, String grayTag) {
+        // 重建请求并添加一些header信息
+        ServerHttpRequest newRequest = null;
+        if (grayTag == null || grayTag.isEmpty()) {
+            newRequest = exchange.getRequest().mutate()
+//                .header(HttpHeaders.AUTHORIZATION, "Bearer " + token) // 不建议直接专递原始的token信息到后端服务
+                    .build();
+        } else {
+            newRequest = exchange.getRequest().mutate()
+                    .header("X-Traffic-Tag", "gray")
+                    .build();
+        }
 
         return exchange.mutate().request(newRequest).build();
     }

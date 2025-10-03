@@ -1,0 +1,6 @@
+server:
+  port: 8090
+
+dify:
+  api-url: http://localhost
+  api-key: app-EuXIpgzv16BOXqjleCTdEzpb
